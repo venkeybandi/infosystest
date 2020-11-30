@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Banking Transaction</title>
+	    <meta name="viewport" content="width=device-width">
+	    <link rel="stylesheet" href="dist/css/bootstrap.css">
+	    <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+	    <script src="dist/js/bootstrap.js"></script>
+	    <script src="dist/js/customscript.js"></script>
+	    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+	    
+	</head>
+	<body>
+		<section>
+			<div class="container sucess"> 
+				<div class="sucesssection">
+					<i class="fa fa-check-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-circle" aria-hidden="true"></i>
+					<i class="fa fa-clock" aria-hidden="true"></i>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="top-1">
+							<h2>Submitted</h2>
+							<p class="small">Your request is submitted and awaits approval</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="sucs-details">
+						<div class="col-md-4 col-xs-12">
+							<div class="img-icon">
+		                        <span>s</span>
+                        		<span><strong>Star tmt steel</strong></span>
+		                    </div>
+						</div>
+						<div class="col-md-4 col-xs-12">
+							<div class="amountsucess">
+								<div id="sucessamount"></div>
+								<p class="small">Domestic payment</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-xs-12">
+							<div class="schuled_date">
+								<div id="schuleddate"></div>
+							<p class="small">Scheduled on</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="tradetails">
+						<i class="fa fa-arrow-down" aria-hidden="true"></i>
+						<i class="fa fa-share-alt" aria-hidden="true"></i>
+						<i class="fa fa-print" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript">
+			document.getElementById("sucessamount").innerHTML='<span class="input-symbol"></span>'+ "" +localStorage.getItem("amountvalue");
+
+			document.getElementById("schuleddate").innerHTML=localStorage.getItem("datevalue");
+
+		</script>
+	</body>
+</html>

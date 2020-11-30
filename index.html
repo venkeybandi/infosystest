@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banking Transaction</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <script src="dist/js/bootstrap.js"></script>
+    <script src="dist/js/customscript.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="header-top">
+                <div class="col-md-6 col-xs-6">
+                    <div class="img-icon">
+                        <span>s</span>
+                        <span><strong>Star tmt steel</strong></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="change-account">
+                        <a href="javascript:;">CHANGE ACCOUNT</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-info">
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">
+                        <p><strong>Last<br> Transaction</strong></p>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <div class="center">
+                            <h5>$500.00</h5>
+                            <p class="small">Materials purchased</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <div class="center">
+                            <h6>07 Oct 2017</h6>
+                            <p class="small">Transaction Date</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-3">
+                        <div class="repeattran">
+                            <a href="javascript:;">REPEAT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <section>
+        <form action="sucess.html" method="POST" id="myForm">
+        <div class="container">
+            <div class="row transaction-details">
+                <div class="transaction">
+                    
+                        <div class="col-md-4">
+                            <div>
+                                
+                                <div class="input-group">
+                                    <label for="amount">Amount</label>
+                                    <span class="input-symbol-dollar"></span>
+                                    <input type="number" id="amount" class="form-control" name="amount" required/> <span class="usdtext">USD</span>
+                                    <img src="dist/img/icon.png" width=25 />
+                                </div>
+                                <div class="input-group">
+                                    <label for="remarks">Remarks</label>
+                                    <input type="text" class="form-control" name="remarks" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="sel1">From</label>
+                                    <select class="formcontrol" id="sel1"> <span>SELECT</span>
+                                        <option>Teleco Acount</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="transaction-shcedule-details">
+                                <h3>Schedule this payment</h3>
+                                <div class="payment-timings">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="javascript:;">Once</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Monthly</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Quaterly</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Yearly</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="date">Start Date</label>
+                                    <input id="date" type="datetime-local" class="form-control" name="date" required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="occurences">Occurences</label>
+                                    <input type="number" class="form-control" name="occurences">
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="javascript:;">BACK</a>
+                <input type="submit" value="PROCEED" onclick="resultData()"  class="btn">
+            </div>
+            
+        </div>
+        </form>
+    </section>
+    
+     <script type="text/javascript">
+        function resultData(){
+            var inputamount = document.getElementById("amount").value;
+            localStorage.setItem("amountvalue", inputamount);
+
+            var inputdate = document.getElementById("date").value;
+            localStorage.setItem("datevalue", inputdate);
+        }
+     </script>
+    
+</body>
+</html>
+
